@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dnipaciente:</strong>
+  <%= @cupo.dniPaciente %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @cupo.nombre %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @cupo.apellido %>
+</p>
+
+<p>
+  <strong>Fechanacimiento:</strong>
+  <%= @cupo.fechaNacimiento %>
+</p>
+
+<p>
+  <strong>Especialidad:</strong>
+  <%= @cupo.especialidad %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @cupo.descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_cupo_path(@cupo) %> |
+<%= link_to 'Back', cupos_path %>

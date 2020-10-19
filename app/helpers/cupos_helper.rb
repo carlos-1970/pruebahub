@@ -1,0 +1,2 @@
+module CuposHelper
+end

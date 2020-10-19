@@ -1,0 +1,47 @@
+<%= form_with(model: cupo, local: true) do |form| %>
+  <% if cupo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cupo.errors.count, "error") %> prohibited this cupo from being saved:</h2>
+
+      <ul>
+        <% cupo.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :dniPaciente %>
+    <%= form.text_field :dniPaciente, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :apellido %>
+    <%= form.text_field :apellido, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fechaNacimiento %>
+    <%= form.text_field :fechaNacimiento, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :especialidad %>
+    <%= form.text_field :especialidad, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_area :descripcion, :class => "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Guardar Citas", :class => "btn btn-primary"%>
+  </div>
+<% end %>
